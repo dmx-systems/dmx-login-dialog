@@ -4,7 +4,7 @@
   "description": "The DeepaMehta 5 login dialog",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "AGPL-3.0",
-  "main": "src/index.js",
+  "main": "src/components/dm5-login-dialog.vue",
   "repository": {
     "type": "git",
     "url": "https://github.com/jri/dm5-login-dialog.git"
