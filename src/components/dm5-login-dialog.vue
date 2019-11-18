@@ -1,5 +1,6 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible" width="20em" title="Login" @open="open" @close="close">
+  <el-dialog custom-class="dm5-login-dialog" :visible="visible" width="20em" title="Login"
+      @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
       <el-select v-model="authMethod">
@@ -68,9 +69,9 @@ export default {
 
     login () {
       dm5.restClient.login(this.credentials, this.authMethod).then(() => {
-        dm5.permCache.clear()
+        dm5.permCache.clear()   // TODO: move to REST client
         this.message = 'Login OK'
-        this.$emit('login', this.credentials.username)
+        this.$emit('logged-in', this.credentials.username)
         this.close()
       }).catch(error => {
         this.message = 'Login failed'
@@ -79,10 +80,9 @@ export default {
       })
     },
 
-    open () {
+    opened () {
+      this.$refs.username.focus()
       this.message = ''
-      // Note: on open the DOM is not yet ready
-      this.$nextTick(() => this.$refs.username.focus())
     },
 
     close () {
