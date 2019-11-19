@@ -69,7 +69,6 @@ export default {
 
     login () {
       dm5.restClient.login(this.credentials, this.authMethod).then(() => {
-        dm5.permCache.clear()   // TODO: move to REST client
         this.message = 'Login OK'
         this.$emit('logged-in', this.credentials.username)
         this.close()
