@@ -1,5 +1,5 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible" width="20em" title="Login"
+  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Login"
       @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
@@ -55,13 +55,22 @@ export default {
         username: '',
         password: ''
       },
-      message: ''
+      message: '',
+      // mirror props
+      visible_: this.visible
     }
   },
 
   computed: {
     showSelect () {
       return this.authMethods.length > 1
+    }
+  },
+
+  watch: {
+    // needed when instantiated via template
+    visible () {
+      this.visible_ = this.visible
     }
   },
 
