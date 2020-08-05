@@ -1,7 +1,7 @@
 {
-  "name": "dm5-login-dialog",
-  "version": "0.1.0",
-  "description": "The DeepaMehta 5 login dialog",
+  "name": "dmx-login-dialog",
+  "version": "1.0.0",
+  "description": "The DMX 5 login dialog",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "AGPL-3.0",
   "main": "src/components/dm5-login-dialog.vue",
