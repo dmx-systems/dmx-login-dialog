@@ -1,5 +1,5 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Login"
+  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Login" :modal="false" v-draggable
       @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
