@@ -1,5 +1,5 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Login" :modal="false" v-draggable
+  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Sign in" :modal="false" v-draggable
       @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
@@ -19,7 +19,7 @@
       {{message}}
     </div>
     <div slot="footer">
-      <el-button type="primary" @click="login">OK</el-button>
+      <el-button type="primary" @click="login">Sign in</el-button>
     </div>
   </el-dialog>
 </template>
@@ -78,11 +78,11 @@ export default {
 
     login () {
       dm5.restClient.login(this.credentials, this.authMethod).then(() => {
-        this.message = 'Login OK'
+        this.message = 'Signing in OK'
         this.$emit('logged-in', this.credentials.username)
         this.close()
       }).catch(error => {
-        this.message = 'Login failed'
+        this.message = 'Signing in failed'
       }).finally(() => {
         this.credentials.password = ''
       })
