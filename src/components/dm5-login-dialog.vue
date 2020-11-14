@@ -14,6 +14,7 @@
     <div class="field">
       <div class="field-label">Password</div>
       <el-input v-model="credentials.password" ref="password" @keyup.native.enter="login" type="password"></el-input>
+      <component v-for="(ext, i) in extensions" :is="ext" :key="i"></component>
     </div>
     <div class="field">
       {{message}}
@@ -45,6 +46,7 @@ export default {
 
   props: {
     visible: Boolean,
+    extensions: Array           // Vue components
   },
 
   data () {
