@@ -32,7 +32,7 @@ export default {
 
   created () {
     // console.log('dm5-login-dialog created', this.authMethods)
-    dm5.restClient.getAuthorizationMethods().then(authMethods => {
+    dm5.rpc.getAuthorizationMethods().then(authMethods => {
       console.log('[DMX] Installed auth methods', authMethods)
       this.authMethods = this.authMethods.concat(authMethods)
     })
@@ -79,7 +79,7 @@ export default {
   methods: {
 
     login () {
-      dm5.restClient.login(this.credentials, this.authMethod).then(() => {
+      dm5.rpc.login(this.credentials, this.authMethod).then(() => {
         this.message = 'Signing in OK'
         this.$emit('logged-in', this.credentials.username)
         this.close()
