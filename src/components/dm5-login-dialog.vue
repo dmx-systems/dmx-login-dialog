@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import dm5 from 'dmx-api'
+import dmx from 'dmx-api'
 
 export default {
 
   created () {
     // console.log('dm5-login-dialog created', this.authMethods)
-    dm5.rpc.getAuthorizationMethods().then(authMethods => {
+    dmx.rpc.getAuthorizationMethods().then(authMethods => {
       console.log('[DMX] Installed auth methods', authMethods)
       this.authMethods = this.authMethods.concat(authMethods)
     })
@@ -79,7 +79,7 @@ export default {
   methods: {
 
     login () {
-      dm5.rpc.login(this.credentials, this.authMethod).then(() => {
+      dmx.rpc.login(this.credentials, this.authMethod).then(() => {
         this.message = 'Signing in OK'
         this.$emit('logged-in', this.credentials.username)
         this.close()
