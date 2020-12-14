@@ -31,7 +31,7 @@ import dmx from 'dmx-api'
 export default {
 
   created () {
-    // console.log('dm5-login-dialog created', this.authMethods)
+    // console.log('dmx-login-dialog created', this.authMethods)
     dmx.rpc.getAuthorizationMethods().then(authMethods => {
       console.log('[DMX] Installed auth methods', authMethods)
       this.authMethods = this.authMethods.concat(authMethods)
@@ -41,7 +41,7 @@ export default {
   },
 
   mounted () {
-    // console.log('dm5-login-dialog mounted')
+    // console.log('dmx-login-dialog mounted')
   },
 
   props: {
