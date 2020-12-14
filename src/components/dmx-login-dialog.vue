@@ -1,5 +1,5 @@
 <template>
-  <el-dialog custom-class="dm5-login-dialog" :visible="visible_" width="20em" title="Sign in" :modal="false" v-draggable
+  <el-dialog custom-class="dmx-login-dialog" :visible="visible_" width="20em" title="Sign in" :modal="false" v-draggable
       @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
@@ -109,7 +109,7 @@ export default {
 </script>
 
 <style>
-.dm5-login-dialog .field + .field {
+.dmx-login-dialog .field + .field {
   margin-top: var(--field-spacing);
 }
 </style>
