@@ -33,7 +33,7 @@ export default {
   created () {
     // console.log('dmx-login-dialog created', this.authMethods)
     dmx.rpc.getAuthorizationMethods().then(authMethods => {
-      console.log('[DMX] Installed auth methods', authMethods)
+      // console.log('[DMX] Installed auth methods', authMethods)
       this.authMethods = this.authMethods.concat(authMethods)
     })
     //
