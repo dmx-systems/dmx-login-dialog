@@ -2,6 +2,10 @@
 
 ## Version History
 
+**2.0.1** -- Jun 14, 2021
+
+* Chore: remove debug log
+
 **2.0** -- Dec 30, 2020
 
 * BREAKING CHANGES
@@ -26,7 +30,3 @@
 **0.1** -- Mar 30, 2020
 
 * 1st release
-
-------------
-Jörg Richter  
-Dec 30, 2020
