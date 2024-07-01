@@ -35,9 +35,9 @@ export default {
     dmx.rpc.getAuthorizationMethods().then(authMethods => {
       // console.log('[DMX] Installed auth methods', authMethods)
       this.authMethods = this.authMethods.concat(authMethods)
+      this.authMethod = this.authMethods[0]
     })
     //
-    this.authMethod = this.authMethods[0]
   },
 
   mounted () {
@@ -51,7 +51,7 @@ export default {
 
   data () {
     return {
-      authMethods: ['Basic'],   // names of installed auth methods (array of string)
+      authMethods: [],   // names of installed auth methods (array of string)
       authMethod: undefined,
       credentials: {
         username: '',
