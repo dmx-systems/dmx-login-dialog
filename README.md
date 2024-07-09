@@ -2,6 +2,11 @@
 
 ## Version History
 
+**3.0.0** -- Jul 10, 2024
+
+* BREAKING CHANGES
+    * Remove hardcoded 'Basic' authentication method 
+
 **2.0.1** -- Jun 14, 2021
 
 * Chore: remove debug log
