@@ -10,10 +10,8 @@
     "url": "https://github.com/dmx-systems/dmx-login-dialog.git"
   },
   "scripts": {
-    "build": "webpack -p --hide-modules; webpack -p --hide-modules --config webpack.sign-up.config.js",
     "coverage": "jest --coverage",
     "test": "jest",
-    "stats": "webpack -p --json > stats.json && ../../node_modules/.bin/webpack-bundle-analyzer stats.json src/main/resources/web"
   },
   "dependencies": {
     "dmx-api": "3.0.1"
