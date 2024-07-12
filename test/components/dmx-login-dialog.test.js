@@ -250,6 +250,4 @@ describe('dmx-login-dialog', () => {
         // then:
         expect(wrapper.vm.message).toBe('')
     })
-
-
 })

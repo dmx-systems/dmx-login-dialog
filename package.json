@@ -1,6 +1,6 @@
 {
   "name": "dmx-login-dialog",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The DMX 5 login dialog",
   "contributors": ["Jörg Richter <jri@dmx.berlin>", "Robert Schuster <robert.schuster@dmx.berlin>"],
   "license": "AGPL-3.0",

@@ -37,7 +37,6 @@ export default {
       this.authMethods = this.authMethods.concat(authMethods)
       this.authMethod = this.authMethods[0]
     })
-    //
   },
 
   mounted () {

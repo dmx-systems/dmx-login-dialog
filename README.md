@@ -2,6 +2,10 @@
 
 ## Version History
 
+**3.0.1** -- Jul 11, 2024
+
+* Fix: package.json
+
 **3.0.0** -- Jul 10, 2024
 
 * BREAKING CHANGES
