@@ -2,7 +2,7 @@
   "name": "dmx-login-dialog",
   "version": "3.0.0",
   "description": "The DMX 5 login dialog",
-  "author": "Jörg Richter <jri@dmx.berlin>",
+  "contributors": ["Jörg Richter <jri@dmx.berlin>", "Robert Schuster <robert.schuster@dmx.berlin>"],
   "license": "AGPL-3.0",
   "main": "src/components/dmx-login-dialog.vue",
   "repository": {
