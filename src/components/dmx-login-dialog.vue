@@ -19,6 +19,9 @@
     <div class="field">
       {{message}}
     </div>
+    <div class="field" v-if="idpRedirectConfigs.length > 0">
+      <a v-for="cfg in idpRedirectConfigs" :key="cfg.name" :href="cfg.uri">Sign-In Via {{ cfg.label }}</a>
+    </div>
     <div slot="footer">
       <el-button type="primary" @click="login">Sign in</el-button>
     </div>
@@ -37,6 +40,11 @@ export default {
       this.authMethods = this.authMethods.concat(authMethods)
       this.authMethod = this.authMethods[0]
     })
+
+    dmx.rpc.getIdentityProviderRedirectConfiguration().then(config => {
+      console.log('[DMX] Identity Provider Redirect Configuration', config)
+      this.idpRedirectConfigs = config
+    })
   },
 
   mounted () {
@@ -52,6 +60,7 @@ export default {
     return {
       authMethods: [],   // names of installed auth methods (array of string)
       authMethod: undefined,
+      idpRedirectConfigs: [],
       credentials: {
         username: '',
         password: ''
