@@ -2,7 +2,7 @@
 
 ## Version History
 
-**3.1** -- unreleased
+**3.1** -- Dec 25, 2024
 
 * Compatible with DMX 5.3.5
     * Depends on `dmx-api` 3.1 (account management)
