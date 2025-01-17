@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "dmx-api": "3.x"
+    "dmx-api": "4.x"
   },
   "devDependencies": {
     "@babel/preset-env": "7.16.11",
