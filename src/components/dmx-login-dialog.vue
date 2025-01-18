@@ -1,6 +1,6 @@
 <template>
-  <el-dialog custom-class="dmx-login-dialog" :visible="visible_" width="20em" title="Sign in" :modal="false"
-      @opened="opened" @close="close">
+  <el-dialog custom-class="dmx-login-dialog" :visible width="20em" title="Sign in" :modal="false" @opened="opened"
+      @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
       <el-select v-model="authMethod">
@@ -56,22 +56,13 @@ export default {
         username: '',
         password: ''
       },
-      message: '',
-      // mirror props
-      visible_: this.visible
+      message: ''
     }
   },
 
   computed: {
     showSelect () {
       return this.authMethods.length > 1
-    }
-  },
-
-  watch: {
-    // needed when instantiated via template
-    visible () {
-      this.visible_ = this.visible
     }
   },
 
