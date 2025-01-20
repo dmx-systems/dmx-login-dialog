@@ -1,6 +1,6 @@
 <template>
-  <el-dialog custom-class="dmx-login-dialog" :visible width="20em" title="Sign in" :modal="false" @opened="opened"
-      @close="close">
+  <el-dialog class="dmx-login-dialog" :model-value="visible" width="20em" title="Sign in" :modal="false"
+      @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
       <el-select v-model="authMethod">
