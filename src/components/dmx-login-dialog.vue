@@ -3,7 +3,7 @@
       @opened="opened" @close="close">
     <div class="field" v-if="showSelect">
       <div class="field-label">Authorization Method</div>
-      <el-select v-model="authMethod">
+      <el-select class="auth-method-selector" v-model="authMethod">
         <el-option v-for="authMethod in authMethods" :value="authMethod" :key="authMethod"></el-option>
       </el-select>
     </div>
@@ -99,6 +99,10 @@ export default {
 </script>
 
 <style>
+.dmx-login-dialog .auth-method-selector {
+  width: 100px;
+}
+
 .dmx-login-dialog .field + .field {
   margin-top: var(--field-spacing);
 }
