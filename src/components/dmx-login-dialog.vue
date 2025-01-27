@@ -19,9 +19,9 @@
     <div class="field">
       {{message}}
     </div>
-    <div slot="footer">
+    <template #footer>
       <el-button type="primary" @click="login">Sign in</el-button>
-    </div>
+    </template>
   </el-dialog>
 </template>
 
